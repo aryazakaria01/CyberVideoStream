@@ -1,18 +1,3 @@
-"""
-VideoStream, An Telegram Bot Project
-Copyright (c) 2021 FeriExp <https://github.com/Feriexp>
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-"""
-
 import asyncio
 import pafy
 from pyrogram import Client, filters
@@ -26,7 +11,7 @@ from pytgcalls.types.input_stream.quality import MediumQualityVideo, MediumQuali
 from pytgcalls.exceptions import NoActiveGroupCall
 
 
-@Client.on_message(filters.command("play") & public_filters)
+@Client.on_message(filters.command("stream") & public_filters)
 async def play_video(client, message):
     flags = " ".join(message.command[1:])
     replied = message.reply_to_message
@@ -103,7 +88,7 @@ async def play_video(client, message):
         except NoActiveGroupCall:
            await msg.edit("**Error:** No active group call, please open group call first")
     else:
-        await message.reply("Error!")
+        await message.reply("Error!, Report To @CyberSupportGroup")
 
 
 @call_py.on_stream_end()
