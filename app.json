@@ -1,0 +1,47 @@
+{
+    "name": "VideoStream",
+    "description": "VideoStream allow you to stream music trought the telegram voice chat feature.",
+    "keywords": ["music", "voice chat", "telegram", "video", "stream"],
+    "repository": "https://github.com/FeriEXP/VideoStream",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "isi dengan string Pyrogram (P)",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @BotFather",
+            "required": true
+        },
+        "USERNAME_BOT": {
+            "description": "Fill woth your bot username without @",
+            "required": true,
+            "value": "feritapibot"
+        },
+        "OWNER_NAME": {
+            "description": "Fill woth your username without @",
+            "required": true,
+            "value": "xflicks"
+        },
+        "API_ID": {
+            "description": "APP ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "API HASH from my.telegram.org",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "Fill with ID who you made a admin for bot (separate with space).",
+            "required": true
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
