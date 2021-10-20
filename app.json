@@ -1,8 +1,8 @@
 {
-    "name": "VideoStream",
+    "name": "CyberVideoStream",
     "description": "VideoStream allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram", "video", "stream"],
-    "repository": "https://github.com/FeriEXP/VideoStream",
+    "repository": "https://github.com/aryazakaria01/CyberVideoStream",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -16,12 +16,12 @@
         "USERNAME_BOT": {
             "description": "Fill woth your bot username without @",
             "required": true,
-            "value": "feritapibot"
+            "value": "YuiiDev_bot"
         },
         "OWNER_NAME": {
             "description": "Fill woth your username without @",
             "required": true,
-            "value": "xflicks"
+            "value": "Badboyanim"
         },
         "API_ID": {
             "description": "APP ID from my.telegram.org",
